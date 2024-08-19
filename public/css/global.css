@@ -3,18 +3,20 @@ html {
 }
 
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Quattrocento Sans', sans-serif;
-  font-weight: 400;
-  word-wrap: break-word;
-  font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: 'Quattrocento Sans', sans-serif;
   font-feature-settings: "kern", "liga", "clig", "calt";
+  font-kerning: normal;
+  font-weight: 400;
+  margin: 0;
+  word-wrap: break-word;
 }
 
 body a {
   color: green;
+  text-decoration: none;
 }
 
 body h1 {
@@ -205,4 +207,9 @@ body h6 {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
+}
+
+.date-read-time {
+  color: #595959;
+  text-align: right;
 }
