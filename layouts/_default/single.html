@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="post-body">
+  <h1 class="text-green">{{ .Title }}</h1>
+  {{ partial "date-and-time-to-read.html" . }}
+  {{ with .GetTerms "tags" }}
+  <hr />
+  <div class="tags">
+    {{- range . }}
+    <div class="tag">
+      <a href="{{ .RelPermalink }}" class="test">{{ .LinkTitle }}</a>
+    </div>
+    {{- end }}
+  </div>
+  {{- end }}
+  <hr />
+  {{ .TableOfContents }}
+  <hr />
+  <div class="content">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ block "title" . }}
+    {{ if not (eq .Title .Site.Title) }}{{ .Title }} &ndash; {{ end }}{{ .Site.Title }}
+    {{ end }}
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="//fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700" rel="stylesheet"
+    type="text/css">
+  <link rel="stylesheet" type="text/css"
+    href="{{.Site.BaseURL}}{{ with .Params.subpath }}{{.}}{{ else }}/{{end}}css/global.css" />
+  <link rel="icon" href="favicon.svg">
+</head>
+
+<body>
+  <header id="page-header" class="bg-green">
+    <a href="{{ with .Params.subpath }}{{.}}{{ else }}/{{end}}">
+      <h1>
+        {{ .Site.Title }}
+      </h1>
+    </a>
+  </header>
+  <!-- Code that all your templates share, like a header -->
+  <div id="main">
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+  </div>
+  {{ block "footer" . }}
+  <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+  {{ end }}
+</body>
+
+</html>

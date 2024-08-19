@@ -1,0 +1,9 @@
+baseURL: https://pasdam.github.io/blog/
+cleanDestinationDir: true
+enableRobotsTXT: true
+languageCode: en-us
+minify:
+  minifyOutput: true
+taxonomies:
+  tag: tags
+title: /dev/null
