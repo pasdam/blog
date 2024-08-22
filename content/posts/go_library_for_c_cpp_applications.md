@@ -11,7 +11,7 @@ title: Use Go code in c/c++ applications
 url: /go_library_for_c_cpp_applications/
 ---
 
-This simple tutorial will show how is possible to call [Go](https://golang.org/) functions from a c/c++ code.
+This simple tutorial will show how is possible to call [GoLang](https://golang.org/) functions from a c/c++ code.
 
 <!--more-->
 
