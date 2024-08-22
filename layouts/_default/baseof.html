@@ -6,7 +6,7 @@
   <title>
     {{ block "title" . }}{{ if not (eq .Title .Site.Title) }}{{ .Title }} &ndash; {{ end }}{{ .Site.Title }}{{ end }}
   </title>
-  <link href="//fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700" rel="stylesheet"
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700" rel="stylesheet"
     type="text/css">
   <link rel="icon" href="{{.Site.BaseURL}}favicon.svg">
   {{- $css := resources.Match "*.css" | resources.Concat "global.css" | minify }}
