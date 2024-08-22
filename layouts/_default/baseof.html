@@ -10,9 +10,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="//fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700" rel="stylesheet"
     type="text/css">
-  <link rel="stylesheet" type="text/css"
-    href="{{.Site.BaseURL}}{{ with .Params.subpath }}{{.}}{{ else }}/{{end}}css/global.css" />
   <link rel="icon" href="favicon.svg">
+  {{- $css := resources.Match "*.css" | resources.Concat "global.css" | minify }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}">
   <meta name="description"
     content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
 </head>
