@@ -6,6 +6,9 @@ minify:
   minifyOutput: true
 params:
   description: Personal blog, which mainly contains tutorial on how to perform specific development tasks
+services:
+  googleAnalytics:
+    id: G-H52BY7123V
 taxonomies:
   tag: tags
 title: /dev/null
