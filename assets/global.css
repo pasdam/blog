@@ -10,11 +10,13 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
   font-kerning: normal;
   font-weight: 400;
+  margin: 0;
   word-wrap: break-word;
 }
 
 body a {
   color: green;
+  text-decoration: none;
 }
 
 body h1 {
@@ -205,4 +207,160 @@ body h6 {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
+}
+
+.date-read-time {
+  color: #595959;
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .pagination {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pagination {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.pagination .button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding-top: 0.75rem;
+}
+
+.pagination .button .left-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  line-height: 1.25rem;
+  margin-left: 0.75rem;
+}
+
+.pagination .button .right-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  line-height: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.pagination .pages {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .pagination .pages {
+    display: flex;
+  }
+}
+
+.pagination .pages .number:hover {
+  border-color: rgb(129 140 248);
+}
+
+.pagination .pages .number {
+  /* text-sm font-medium leading-none cursor-pointer border-t border-transparent hover:border-indigo-400 pt-3 mr-4 px-2 */
+  border-color: transparent;
+  border-top-width: 1px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  line-height: 1.25rem;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+}
+
+.pagination .pages .number .current {
+  /* text-sm font-medium leading-none cursor-pointer border-t border-indigo-400 pt-3 mr-4 px-2 */
+  border-color: rgb(129 140 248);
+  border-top-width: 1px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  line-height: 1.25rem;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#to-top-button > svg {
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  border-radius: 9999px;
+  border-width: 0px;
+  color: green;
+  cursor: pointer;
+  display: block;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  font-size: 1.875rem;
+  font-weight: 700;
+  height: 4rem;
+  line-height: 2.25rem;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  width: 4rem;
+}
+
+.breadcrumbs {
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  list-style: none;
+  margin-left: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs .entry {
+  align-items: center;
+  display: flex;
+}
+
+.breadcrumbs .icon {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.breadcrumbs .home .icon {
+  margin-inline-end: 0.625rem;
+}
+
+.breadcrumbs .label {
+  margin-inline-start: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .breadcrumbs .label {
+    margin-inline-start: 0.5rem;
+  }
+}
+
+.breadcrumbs .divider {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }

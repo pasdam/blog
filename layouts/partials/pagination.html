@@ -1,9 +1,9 @@
 {{- with .Paginator }}
 {{- $currentPageNumber := .PageNumber }}
-<div class="flex justify-between lg:px-0 sm:px-6 px-4">
+<div class="pagination">
   <div>
     {{- with .First }}{{- if ne $currentPageNumber .PageNumber }}
-    <a href="{{ .URL }}" aria-label="First" role="button" class="flex items-center pt-3 cursor-pointer">
+    <a href="{{ .URL }}" aria-label="First" role="button" class="button">
       <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
           stroke-linejoin="round" />
@@ -12,13 +12,13 @@
         <path d="M1.1665 4.00002L4.49984 0.666687" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
           stroke-linejoin="round" />
       </svg>
-      <span class="text-sm ml-3 font-medium leading-none ">First</span>
+      <span class="left-label">First</span>
     </a>
     {{- end }}{{- end }}
   </div>
   <div>
     {{- with .Prev }}
-    <a href="{{ .URL }}" aria-label="Previous" role="button" class="flex items-center pt-3 cursor-pointer">
+    <a href="{{ .URL }}" aria-label="Previous" role="button" class="button">
       <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
           stroke-linejoin="round" />
@@ -27,11 +27,11 @@
         <path d="M1.1665 4.00002L4.49984 0.666687" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
           stroke-linejoin="round" />
       </svg>
-      <span class="text-sm ml-3 font-medium leading-none ">Previous</span>
+      <span class="left-label">Previous</span>
     </a>
     {{- end }}
   </div>
-  <div class="sm:flex hidden">
+  <div class="pages">
     {{- $slots := 5 }}
     {{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
     {{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
@@ -41,18 +41,17 @@
 
     {{- range $k := seq $start $end }}
     {{- if eq $.Paginator.PageNumber $k }}
-    <a class="text-sm font-medium leading-none cursor-pointer border-t border-indigo-400 pt-3 mr-4 px-2"
-      aria-current="page" aria-label="Page {{ $k }}" role="button">{{ $k }}</a>
+    <a class="number current" aria-current="page" aria-label="Page {{ $k }}" role="button">{{ $k }}</a>
     {{- else }}
-    <a class="text-sm font-medium leading-none cursor-pointer border-t border-transparent hover:border-indigo-400 pt-3 mr-4 px-2"
-      href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" role="button">{{ $k }}</a>
+    <a class="number" href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" role="button">{{
+      $k }}</a>
     {{- end }}
     {{- end }}
   </div>
   <div>
     {{- with .Next }}
-    <a href="{{ .URL }}" aria-label="Next" role="button" class="flex items-center pt-3 cursor-pointer">
-      <span class="text-sm font-medium leading-none mr-3">Next</span>
+    <a href="{{ .URL }}" aria-label="Next" role="button" class="button">
+      <span class="right-label">Next</span>
       <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
           stroke-linejoin="round" />
@@ -66,8 +65,8 @@
   </div>
   <div>
     {{- with .Last }}{{- if ne $currentPageNumber .PageNumber }}
-    <a href="{{ .URL }}" aria-label="Last" role="button" class="flex items-center pt-3 cursor-pointer">
-      <span class="text-sm font-medium leading-none mr-3">Last</span>
+    <a href="{{ .URL }}" aria-label="Last" role="button" class="button">
+      <span class="right-label">Last</span>
       <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.1665 4H12.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"
           stroke-linejoin="round" />
