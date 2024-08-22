@@ -14,12 +14,13 @@
   <meta name="description"
     content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H52BY7123V"></script>
-  <script async>
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Config.Services.GoogleAnalytics.ID }}"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-H52BY7123V', {
+    gtag('config', '{{ .Site.Config.Services.GoogleAnalytics.ID }}', {
       cookie_flags: 'SameSite=None;Secure',
     });
   </script>
