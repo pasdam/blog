@@ -1,5 +1,6 @@
 ---
 date: 2019-04-27
+summary: Guide on how to add Disqus comments to a GatsbyJS static blog
 tags:
   - blog
   - comments

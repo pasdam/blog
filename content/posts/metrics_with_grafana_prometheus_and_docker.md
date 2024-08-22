@@ -1,5 +1,6 @@
 ---
 date: 2020-04-18
+summary: Tutorial to show how to configure Grafana to pull metrics from Prometheus, using a docker compose setup
 tags:
   - Grafana
   - Prometheus

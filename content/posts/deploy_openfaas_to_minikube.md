@@ -1,5 +1,6 @@
 ---
 date: 2020-05-21
+summary: Tutorial on how to deploy OpenFaaS to kubernetes, using minikube
 tags:
   - Docker
   - Kubernetes

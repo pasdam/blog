@@ -1,5 +1,6 @@
 ---
 date: 2019-09-27
+summary: Article to show few cases when using Optional in Java is an anti-pattern
 tags:
   - antipattern
   - engineering

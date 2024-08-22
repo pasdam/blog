@@ -1,5 +1,6 @@
 ---
 date: 2019-04-27
+summary: Tutorial to show how to call Go code from a c/c++ application
 tags:
   - C
   - C++

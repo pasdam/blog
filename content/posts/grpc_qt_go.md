@@ -1,5 +1,6 @@
 ---
 date: 2017-07-24
+summary: Tutorial on how to use gRPC/protobuf with a C++ client and Go server
 tags:
   - C++
   - development

@@ -1,5 +1,6 @@
 ---
 date: 2019-06-09
+summary: Guide on how to use Android SDK with Java 11, by manually installing the required classes
 tags:
   - Android SDK
   - bug

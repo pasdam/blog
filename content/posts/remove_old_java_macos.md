@@ -1,5 +1,6 @@
 ---
 date: 2019-02-11
+summary: Guide on how to uninstall older Java versions from macOS
 tags:
   - Java
   - macOS

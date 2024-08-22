@@ -1,5 +1,6 @@
 ---
 date: 2019-06-09
+summary: How to fix the unknown android license status issue with Flutter
 tags:
   - Android SDK
   - bug

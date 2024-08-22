@@ -13,6 +13,8 @@
   <link rel="stylesheet" type="text/css"
     href="{{.Site.BaseURL}}{{ with .Params.subpath }}{{.}}{{ else }}/{{end}}css/global.css" />
   <link rel="icon" href="favicon.svg">
+  <meta name="description"
+    content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
 </head>
 
 <body>

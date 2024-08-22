@@ -1,5 +1,6 @@
 ---
 date: 2018-11-23
+summary: Tutorial on how to collect metrics using the DataDog agent, running locally in a docker container
 tags:
   - cloud
   - DataDog
