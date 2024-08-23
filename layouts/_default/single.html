@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="post-body">
+<article class="post-body">
   <h1 class="text-green">{{ .Title }}</h1>
   {{ partial "date-and-time-to-read.html" . }}
   {{ with .GetTerms "tags" }}
@@ -12,11 +12,13 @@
     {{- end }}
   </div>
   {{- end }}
+  {{ if (and (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "")) }}
   <hr />
   {{ .TableOfContents }}
+  {{- end }}
   <hr />
   <div class="content">
     {{ .Content }}
   </div>
-</div>
+</article>
 {{ end }}
