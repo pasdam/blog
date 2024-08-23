@@ -22,7 +22,7 @@
     gtag('js', new Date());
     gtag('config', '{{ .Site.Config.Services.GoogleAnalytics.ID }}', {
       {{- $url := urls.Parse .Site.BaseURL }}
-      cookie_domain: '{{ $url.Host }}',
+      cookie_domain: '{{ $url.Hostname }}',
       cookie_flags: 'SameSite=None;Secure',
     });
   </script>
