@@ -16,6 +16,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script async
     src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Config.Services.GoogleAnalytics.ID }}"></script>
+  {{ if (findRE "<pre" .Content 1) }}
+  {{- $js := resources.Match "copy-code-button.js" | resources.Concat "copy-code-button.js" | minify }}
+  <script async src="{{ $js.Permalink }}" onload="setupCopyButtons('{{- i18n "code_copy" | default "copy" }}', '{{- i18n "code_copied" | default "copied!" }}');"></script>
+  {{ end }}
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
