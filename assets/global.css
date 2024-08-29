@@ -451,3 +451,7 @@ nav#TableOfContents li a:before {
   content: counters(item, ".") ". ";
   counter-increment: item;
 }
+
+.related {
+  margin: auto;
+}

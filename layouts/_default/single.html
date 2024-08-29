@@ -28,6 +28,8 @@
 {{ end }}
 {{ define "footer" }}
 <hr />
+{{ partial "related.html" . }}
+<hr />
 {{ partial "socialshare.html" . }}
 <hr />
 {{ template "_internal/disqus.html" . }}
