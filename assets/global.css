@@ -203,6 +203,26 @@ hr {
   line-height: 1.1;
 }
 
+.post-body table {
+  margin: auto;
+}
+
+.post-body table th {
+  background-color: green;
+  color: #fff;
+  font-weight: 400;
+  text-align: left;
+  padding: .375em .5em;
+}
+
+.post-body table td {
+  padding: .375em .5em;
+}
+
+.post-body table tr:nth-child(2n) {
+  background-color: #eee;
+}
+
 .highlight pre {
   padding: 1em;
   margin: .5em 0;

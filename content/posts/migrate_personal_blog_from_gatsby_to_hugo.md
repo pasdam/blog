@@ -106,12 +106,10 @@ yet an alternative in Hugo, but admittedly I haven't look deep into it enough.
 
 Comparing the posts list load for both stacks:
 
-```
 | Stack    | # requests | size (Kb) |
 |----------|------------|-----------|
 | GatsbyJS | 19         | 467       |
 | Hugo     | 3          | 17        |
-```
 
 you can see that the number of HTTP requests to retrieve all the resources went
 from 19 (which is crazy) to a more reasonable 3, 1 for the HTML, 1 for the CSS
