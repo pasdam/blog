@@ -2,6 +2,17 @@ baseURL: https://pasdam.github.io/blog/
 cleanDestinationDir: true
 enableRobotsTXT: true
 languageCode: en-us
+menus:
+  main:
+  - name: Home
+    pageRef: /
+    weight: 10
+  - name: Blog
+    pageRef: /posts
+    weight: 20
+  - name: GitHub
+    url: https://github.com/pasdam/blog
+    weight: 30
 minify:
   minifyOutput: true
 params:
